@@ -7,7 +7,7 @@ public class Board {
 	
 	public List<Integer> whites;
 	public List<Integer> blacks;
-	
+	public int TestChange;
 	//initial Board
 	public Board(){
 		whites = new ArrayList<Integer>();
