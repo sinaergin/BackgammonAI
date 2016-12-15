@@ -10,9 +10,16 @@ public class Test {
 		Node<String> childNode1 = new Node<String>("Child 1", parentNode);
 		Node<String> childNode2 = new Node<String>("Child 2");     
 
-		Board asd = new Board();
-		int a = Utility.calculate(asd);
-		System.out.println(a);
+		Board asdCCC = new Board();
+		Board asd = new Board(5,3,6,7);
+		List<Board> x = Utility.getValidMovesWithij(asdCCC,2,3);
+		System.out.println("SIZE: "+x.size());
+		for (Board bbb : x) {
+			System.out.println(Utility.calculate(bbb));
+		}
+		//int a = Utility.calculate(asd);
+		//System.out.println(a);
+		
 		//childNode2.setParent(parentNode); 
 //parentNode.addChild(childNode2);
 		//Node<String> grandchildNode = new Node<String>("Grandchild of parentNode. Child of childNode1", childNode1); 
