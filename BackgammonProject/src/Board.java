@@ -50,9 +50,14 @@ public class Board {
 		blacks.add(24);
 		blacks.add(24);
 	}
-	
+	public Board(Board b){
+		whites = new ArrayList<Integer>();
+		blacks = new ArrayList<Integer>();
+		this.whites.addAll(b.whites);
+		this.blacks.addAll(b.blacks);
+	}
 	public static Board newBoard(Board b,int indexOfMovingChecker,int zar){
-		Board retB = b;
+		Board retB = new Board(b);
 		int checkerValue = retB.whites.get(indexOfMovingChecker);
 		int newValueOfChecker = checkerValue+zar;
 		if (Collections.frequency(b.blacks,newValueOfChecker) == 0){//KIRIK YOK

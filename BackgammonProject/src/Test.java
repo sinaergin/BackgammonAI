@@ -14,7 +14,12 @@ public class Test {
 		Board asd = new Board(5,3,6,7);
 		List<Board> x = Utility.getValidMovesWithij(asdCCC,2,3);
 		System.out.println("SIZE: "+x.size());
+		List<Board> aaa = Utility.validMoves(asdCCC);
 		for (Board bbb : x) {
+			for (int ix : bbb.whites) {
+				System.out.print(ix+".");
+			}
+			System.out.println("");
 			System.out.println(Utility.calculate(bbb));
 		}
 		//int a = Utility.calculate(asd);

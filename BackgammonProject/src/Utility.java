@@ -120,17 +120,19 @@ public class Utility {
 		int i = 1;
 		int j = 1;
 		Date d1 = new Date();
-		for (int x : board.whites) {
-			for(i = 1; i<7;i++){
-				for(j = 1; j<7;j++){
-					getValidMovesWithij(board,i,j);
+		//for (int asayi = 0; asayi<100; asayi++) {//TEST
+			for (int x : board.whites) {
+				for(i = 1; i<7;i++){
+					for(j = 1; j<7;j++){
+						retBoard.addAll(getValidMovesWithij(board,i,j));
+					}
 				}
-			}
-		}
+			}	
+		//}//TEST
 		Date d2 = new Date();
 		
-		long seconds = (d2.getTime()-d1.getTime())/1000;
-		
+		long seconds = (d2.getTime()-d1.getTime());
+		System.out.println(seconds);
 		return retBoard;
 		
 	}
